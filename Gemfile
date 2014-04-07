@@ -1,14 +1,14 @@
-source 'https://rubygems.org'
+source 'http://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.2'
 
 # Use sqlite3 as the database for Active Record
-gem 'pg',group: :production
+#gem 'pg',group: :production
 
 gem 'sqlite3',group: :development
 
-gem 'blogit', github: "katanacode/blogit"
+gem 'blogit'
 
 gem 'devise'
 
