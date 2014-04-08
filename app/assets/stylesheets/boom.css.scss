@@ -1,3 +1,107 @@
 // Place all the styles related to the Boom controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+@import "bootstrap";
+body
+{
+	background-color:#eee;
+	
+}
+
+.Mid
+{
+	margin-left: 20%;
+	margin-right: 20%;
+	
+}
+.bNewPost
+{
+	margin:10px;
+}
+.blog_post
+{
+	background-color:#ffffff;
+	padding:10px;
+	border-radius:10px;	
+}
+.bTitle a
+{
+	text-decoration: none;
+	padding:0;
+	text-transform:uppercase;
+}
+.blog_post_footer
+{
+	color:#888;
+}
+.bTimeStamp
+{
+	color:#f44;
+}
+#blog_share_bar
+{
+	margin-top:10px;
+	width:100%;
+}
+.social_button
+{
+	display:block-inline;
+}
+
+.bNew
+{
+	color:#777;
+}
+.form-control
+{
+	margin-bottom:10px;
+}
+
+.bCreatePost
+{
+	border-radius:10px;
+	background-color:white;
+	padding:10px;
+}
+.bOptions
+{
+	display:block-inline;
+	width:40%;
+	margin:10x;
+	padding:5px;
+}
+.bOptionsTag
+{
+	width:60%;
+	.form-control
+	{
+		width:60%;
+	}
+}
+.bTag
+{
+	display:inline;
+}
+.blog_post_tip
+{
+	font-size:14px;
+	display:block;
+	text-align:left;
+	width:80%;
+	margin:auto;
+	margin-bottom:10px;
+	padding:5px;
+}
+
+.jqte-test {
+	display:block;
+	margin:0 0 10px;
+	padding:6px;
+	width:95%;
+	background:#FFF;
+	
+}
+.jqte
+{
+	min-height:150px;
+}

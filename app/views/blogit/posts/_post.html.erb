@@ -2,10 +2,10 @@
 
   <%# Render the header for this blog post %>
   <%= render "blogit/posts/post_head", post: post %>
-
+  <hr>
   <%# Render the body of this blog post (as Markdown) %>
   <%= render "blogit/posts/post_body", post: post %>
-
+  <hr>
   <%# Render admin links to edit/delete this post %>
   <%= render "blogit/posts/post_links", post: post %>
 

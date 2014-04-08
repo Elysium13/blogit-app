@@ -1,3 +1,4 @@
+
 <%= form_for(@post, html: {class: "new_blog_post", id: "new_blog_post"}) do |f| %>
 
   <% if @post.errors.any? %>
@@ -14,35 +15,46 @@
 
   <fieldset>
     <%= field do %>
-      <%= f.text_field :title, placeholder: t(:give_your_post_a_title, scope: 'blogit.posts') %>
+      <%= f.text_field :title, placeholder: t(:give_your_post_a_title, scope: 'blogit.posts'), :class=>"form-control" %>
     <% end %>
 
     <%= field do %>
-      <%= f.text_area :body, placeholder: t(:write_something_here, scope: 'blogit.posts') %>
+
+      <%= f.text_area :body, placeholder: t(:write_something_here, scope: 'blogit.posts'),:name=>"textarea", :class=>"jqte-test" %>
     <% end %>
   </fieldset>
 
   <fieldset>
 
-    <%= field id: "new_blog_post_tag_field" do %>
+    <%= field id: "new_blog_post_tag_field", :class=>"bOptions bOptionsTag pull-left" do %>
       <%= f.label :tag_list, t(:tags, scope: 'blogit.posts') %>
-      <%= f.text_field :tag_list, placeholder: t(:tag_placeholder, scope: 'blogit.posts') %>
+      <%= f.text_field :tag_list, :class=>"form-control bTag", placeholder: t(:tag_placeholder, scope: 'blogit.posts') %>
     <% end %>
 
-    <%= field id: "new_blog_post_state_field" do %>
+    <%= field id: "new_blog_post_state_field", :class=> "bOptions pull-right" do %>
       <%= f.label :state, t(:state, scope: 'blogit.posts') %>
-      <%= f.collection_select(:state, Blogit::Post::AVAILABLE_STATUS, :to_s, :to_s) %>
+      <%= f.collection_select :state, Blogit::Post::AVAILABLE_STATUS, :to_s, :to_s,{:class=>"form-control bTag pull-right"} %>
     <% end %>
-
-    <p class="blog_post_tip">
+  </fieldset>
+<p class="blog_post_tip label label-info">
       <%=t :tip_you_can_style_your_post_using, scope: 'blogit.posts', parser: blogit_conf.default_parser %>
     </p>
 
-  </fieldset>
-
   <%= actions do %>
-    <%= f.submit %> <%=t :or, scope: 'blogit.posts'%>
-    <%= link_to(t(:cancel, scope: 'blogit.posts'), @post.new_record? ? blog_root_path : post_path(@post)) %>
+    <%= f.submit :class=>"btn btn-success"%> <%=t :or, scope: 'blogit.posts'%>
+    <%= link_to(t(:cancel, scope: 'blogit.posts'), @post.new_record? ? blog_root_path : post_path(@post), :class=>"btn btn-danger") %>
   <% end %>
 
 <% end %>
+
+<script>
+  $('.jqte-test').jqte();
+  
+  // settings of status
+  var jqteStatus = true;
+  $(".status").click(function()
+  {
+    jqteStatus = jqteStatus ? false : true;
+    $('.jqte-test').jqte({"status" : jqteStatus})
+  });
+</script>
