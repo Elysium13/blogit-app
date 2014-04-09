@@ -11,14 +11,14 @@ gem 'sqlite3',group: :development
 
 gem 'blogit', :git=> "https://github.com/KatanaCode/blogit"
 
+gem 'bootstrap-wysihtml5-rails'
+
 gem 'devise'
-<<<<<<< HEAD
 
 gem 'RedCloth'
 
-=======
 gem 'rails_12factor'
->>>>>>> d00f3e8c3f914124a1dab969db1600e7a96f72db
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 

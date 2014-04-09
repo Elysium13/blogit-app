@@ -19,9 +19,17 @@
     <% end %>
 
     <%= field do %>
+      <%= f.text_area :body, placeholder: t(:write_something_here, scope: 'blogit.posts'),:class=>"wysihtml5 form-control bRichText",:id=>"some-textarea" %>
 
-      <%= f.text_area :body, placeholder: t(:write_something_here, scope: 'blogit.posts'),:name=>"textarea", :class=>"jqte-test" %>
-    <% end %>
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $('.wysihtml5').each(function(i, elem) {
+          $(elem).wysihtml5();
+        });
+      })
+    </script>
+    <% end %> 
+
   </fieldset>
 
   <fieldset>
@@ -46,15 +54,3 @@
   <% end %>
 
 <% end %>
-
-<script>
-  $('.jqte-test').jqte();
-  
-  // settings of status
-  var jqteStatus = true;
-  $(".status").click(function()
-  {
-    jqteStatus = jqteStatus ? false : true;
-    $('.jqte-test').jqte({"status" : jqteStatus})
-  });
-</script>
