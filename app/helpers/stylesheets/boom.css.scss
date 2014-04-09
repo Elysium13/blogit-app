@@ -2,17 +2,41 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 @import "bootstrap";
+@font-face { font-family: goudy_bookletter_1911; src: font-url('goudy_bookletter_1911.otf'); } 
 body
 {
 	background-color:#eee;
 	
 }
-
+.bUser
+{
+    color:rgba(255,100,100,0.8);
+}
+#user_nav
+{
+    margin-top:100px;
+    padding:20px;
+}
+.bNewPostTitle
+{
+    font-size:18px;
+}
+.bErrorList
+{
+    padding-left:20px;
+    padding-right:20px;
+}
+.bBody
+{
+    display:block;
+    padding:10px 40px 10px 40px;
+    background-color:rgba(200,200,200,0.2);
+}
 .Mid
 {
 	margin-left: 20%;
 	margin-right: 20%;
-	
+	margin-top:100px;
 }
 .bNewPost
 {
@@ -29,6 +53,7 @@ body
 	text-decoration: none;
 	padding:0;
 	text-transform:uppercase;
+	font-family: goudy_bookletter_1911;
 }
 .blog_post_footer
 {
@@ -50,7 +75,7 @@ body
 
 .bNew
 {
-	color:#777;
+	color:#428bca;
 }
 .form-control
 {
@@ -82,15 +107,21 @@ body
 {
 	display:inline;
 }
+.bFoot
+{
+    float:right;
+}
+.bGlyph
+{
+}
 .blog_post_tip
 {
 	font-size:14px;
 	display:block;
 	text-align:left;
-	width:80%;
-	margin:auto;
+	width:100%;
 	margin-bottom:10px;
-	padding:5px;
+	padding:10px;
 }
 
 .bRichText

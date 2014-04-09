@@ -1,9 +1,10 @@
 Blogin::Application.routes.draw do
 
   get "boom/index"
-
+    
   devise_for :users
   mount Blogit::Engine => "/blog"
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

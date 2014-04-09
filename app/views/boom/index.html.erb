@@ -1,15 +1,1 @@
-<h1>Boom#index</h1>
-<p>Find me in app/views/boom/index.html.erb</p>
-<div id="user_nav">
-    <% if user_signed_in? %>
-        Signed in as <%= current_user.email %>. This cannot be cheese?
-        <%= link_to 'Sign out', destroy_user_session_path ,method: :delete %>
-    <% else %>
-        <%= link_to 'Register', new_user_registration_path %> or <%= link_to 'Sign in', new_user_session_path %>
-    <% end %>
-</div>
-
-<div id="blog-panel">
-	<h1><%= link_to 'link to blog', '/blog' %></h1>
-</div>
-
+Click on Blogs to view them.
